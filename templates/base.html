@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Inline style for background */
+        body {
+            background: url('{{ url_for("static", filename="robotics-bg.jpg") }}') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="/">Task Manager</a>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        <p>&copy; 2025 Task Manager App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
